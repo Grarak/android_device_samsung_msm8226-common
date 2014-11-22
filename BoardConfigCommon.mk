@@ -1,4 +1,4 @@
-# Copyright (C) 2012 The CyanogenMod Project
+# Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,11 +16,11 @@
 -include device/samsung/qcom-common/BoardConfigCommon.mk
 
 # Platform
-TARGET_BOARD_PLATFORM := msm8974
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
+TARGET_BOARD_PLATFORM := msm8226
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno305
 
 # Architecture
-TARGET_CPU_VARIANT := krait
+TARGET_CPU_VARIANT := cortex-a7
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -44,7 +44,7 @@ BOARD_CHARGING_CMDLINE_VALUE := "true"
 PRODUCT_BOOT_JARS := $(subst $(space),:,$(PRODUCT_BOOT_JARS))
 
 # Display
-BOARD_EGL_CFG := device/samsung/msm8974-common/configs/egl.cfg
+BOARD_EGL_CFG := device/samsung/msm8226-common/configs/egl.cfg
 TARGET_QCOM_DISPLAY_VARIANT := caf-new
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
@@ -69,7 +69,7 @@ TARGET_USES_QCOM_BSP := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-    device/samsung/msm8974-common/sepolicy
+    device/samsung/msm8226-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     file_contexts \
